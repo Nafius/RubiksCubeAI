@@ -412,31 +412,31 @@ class Cube{
 	}
 	
 	public Cube createLeftClockwise(){
-		Cube newCube = this;
+		Cube clone = new Cube(this);
 		
-		newCube.holder.getSquare(0).setColor(newCube.front.getSquare(0).getColor());
-		newCube.holder.getSquare(3).setColor(newCube.front.getSquare(3).getColor());
-		newCube.holder.getSquare(6).setColor(newCube.front.getSquare(6).getColor());
+		clone.holder.getSquare(0).setColor(clone.front.getSquare(0).getColor());
+		clone.holder.getSquare(3).setColor(clone.front.getSquare(3).getColor());
+		clone.holder.getSquare(6).setColor(clone.front.getSquare(6).getColor());
 		
-		newCube.front.getSquare(0).setColor(newCube.top.getSquare(0).getColor());
-		newCube.front.getSquare(3).setColor(newCube.top.getSquare(3).getColor());
-		newCube.front.getSquare(6).setColor(newCube.top.getSquare(6).getColor());
+		clone.front.getSquare(0).setColor(clone.top.getSquare(0).getColor());
+		clone.front.getSquare(3).setColor(clone.top.getSquare(3).getColor());
+		clone.front.getSquare(6).setColor(clone.top.getSquare(6).getColor());
 		
-		newCube.top.getSquare(0).setColor(newCube.back.getSquare(8).getColor());
-		newCube.top.getSquare(3).setColor(newCube.back.getSquare(5).getColor());
-		newCube.top.getSquare(6).setColor(newCube.back.getSquare(2).getColor());
+		clone.top.getSquare(0).setColor(clone.back.getSquare(8).getColor());
+		clone.top.getSquare(3).setColor(clone.back.getSquare(5).getColor());
+		clone.top.getSquare(6).setColor(clone.back.getSquare(2).getColor());
 		
-		newCube.back.getSquare(2).setColor(newCube.bottom.getSquare(6).getColor());
-		newCube.back.getSquare(5).setColor(newCube.bottom.getSquare(3).getColor());
-		newCube.back.getSquare(8).setColor(newCube.bottom.getSquare(0).getColor());
+		clone.back.getSquare(2).setColor(clone.bottom.getSquare(6).getColor());
+		clone.back.getSquare(5).setColor(clone.bottom.getSquare(3).getColor());
+		clone.back.getSquare(8).setColor(clone.bottom.getSquare(0).getColor());
 		
-		newCube.bottom.getSquare(0).setColor(newCube.holder.getSquare(0).getColor());
-		newCube.bottom.getSquare(3).setColor(newCube.holder.getSquare(3).getColor());
-		newCube.bottom.getSquare(6).setColor(newCube.holder.getSquare(6).getColor());
+		clone.bottom.getSquare(0).setColor(clone.holder.getSquare(0).getColor());
+		clone.bottom.getSquare(3).setColor(clone.holder.getSquare(3).getColor());
+		clone.bottom.getSquare(6).setColor(clone.holder.getSquare(6).getColor());
 		
-		newCube.solvePath.Add(0);
+		clone.solvePath.Add(0);
 		
-		return newCube;
+		return clone;
 	}
 	
 	/* 
@@ -444,31 +444,31 @@ class Cube{
 	* Adds the corresponding path number to the Cube's solvePath list when finished.
 	*/
 	public Cube createLeftCounterClockwise() {
-		Cube newCube = this;
+		Cube clone = new Cube(this);
 		
-		newCube.holder.getSquare(0).setColor(newCube.front.getSquare(0).getColor());
-		newCube.holder.getSquare(3).setColor(newCube.front.getSquare(3).getColor());
-		newCube.holder.getSquare(6).setColor(newCube.front.getSquare(6).getColor());
+		clone.holder.getSquare(0).setColor(clone.front.getSquare(0).getColor());
+		clone.holder.getSquare(3).setColor(clone.front.getSquare(3).getColor());
+		clone.holder.getSquare(6).setColor(clone.front.getSquare(6).getColor());
 		
-		newCube.front.getSquare(0).setColor(newCube.bottom.getSquare(0).getColor());
-		newCube.front.getSquare(3).setColor(newCube.bottom.getSquare(3).getColor());
-		newCube.front.getSquare(6).setColor(newCube.bottom.getSquare(6).getColor());
+		clone.front.getSquare(0).setColor(clone.bottom.getSquare(0).getColor());
+		clone.front.getSquare(3).setColor(clone.bottom.getSquare(3).getColor());
+		clone.front.getSquare(6).setColor(clone.bottom.getSquare(6).getColor());
 		
-		newCube.bottom.getSquare(0).setColor(newCube.back.getSquare(8).getColor());
-		newCube.bottom.getSquare(3).setColor(newCube.back.getSquare(5).getColor());
-		newCube.bottom.getSquare(6).setColor(newCube.back.getSquare(2).getColor());
+		clone.bottom.getSquare(0).setColor(clone.back.getSquare(8).getColor());
+		clone.bottom.getSquare(3).setColor(clone.back.getSquare(5).getColor());
+		clone.bottom.getSquare(6).setColor(clone.back.getSquare(2).getColor());
 		
-		newCube.back.getSquare(2).setColor(newCube.top.getSquare(6).getColor());
-		newCube.back.getSquare(5).setColor(newCube.top.getSquare(3).getColor());
-		newCube.back.getSquare(8).setColor(newCube.top.getSquare(0).getColor());
+		clone.back.getSquare(2).setColor(clone.top.getSquare(6).getColor());
+		clone.back.getSquare(5).setColor(clone.top.getSquare(3).getColor());
+		clone.back.getSquare(8).setColor(clone.top.getSquare(0).getColor());
 		
-		newCube.top.getSquare(0).setColor(newCube.holder.getSquare(0).getColor());
-		newCube.top.getSquare(3).setColor(newCube.holder.getSquare(3).getColor());
-		newCube.top.getSquare(6).setColor(newCube.holder.getSquare(6).getColor());
+		clone.top.getSquare(0).setColor(clone.holder.getSquare(0).getColor());
+		clone.top.getSquare(3).setColor(clone.holder.getSquare(3).getColor());
+		clone.top.getSquare(6).setColor(clone.holder.getSquare(6).getColor());
 		
-		newCube.solvePath.Add(1);
+		clone.solvePath.Add(1);
 		
-		return newCube;
+		return clone;
 	}
 	
 	/* 
@@ -476,31 +476,31 @@ class Cube{
 	* Adds the corresponding path number to the Cube's solvePath list when finished.
 	*/
 	public Cube createRightClockwise() {
-		Cube newCube = this;
+		Cube clone = new Cube(this);
 		
-		newCube.holder.getSquare(2).setColor(newCube.front.getSquare(2).getColor());
-		newCube.holder.getSquare(5).setColor(newCube.front.getSquare(5).getColor());
-		newCube.holder.getSquare(8).setColor(newCube.front.getSquare(8).getColor());
+		clone.holder.getSquare(2).setColor(clone.front.getSquare(2).getColor());
+		clone.holder.getSquare(5).setColor(clone.front.getSquare(5).getColor());
+		clone.holder.getSquare(8).setColor(clone.front.getSquare(8).getColor());
 		
-		newCube.front.getSquare(2).setColor(newCube.bottom.getSquare(2).getColor());
-		newCube.front.getSquare(5).setColor(newCube.bottom.getSquare(5).getColor());
-		newCube.front.getSquare(8).setColor(newCube.bottom.getSquare(8).getColor());
+		clone.front.getSquare(2).setColor(clone.bottom.getSquare(2).getColor());
+		clone.front.getSquare(5).setColor(clone.bottom.getSquare(5).getColor());
+		clone.front.getSquare(8).setColor(clone.bottom.getSquare(8).getColor());
 		
-		newCube.bottom.getSquare(2).setColor(newCube.back.getSquare(6).getColor());
-		newCube.bottom.getSquare(5).setColor(newCube.back.getSquare(3).getColor());
-		newCube.bottom.getSquare(8).setColor(newCube.back.getSquare(0).getColor());
+		clone.bottom.getSquare(2).setColor(clone.back.getSquare(6).getColor());
+		clone.bottom.getSquare(5).setColor(clone.back.getSquare(3).getColor());
+		clone.bottom.getSquare(8).setColor(clone.back.getSquare(0).getColor());
 		
-		newCube.back.getSquare(0).setColor(newCube.top.getSquare(8).getColor());
-		newCube.back.getSquare(3).setColor(newCube.top.getSquare(5).getColor());
-		newCube.back.getSquare(6).setColor(newCube.top.getSquare(2).getColor());
+		clone.back.getSquare(0).setColor(clone.top.getSquare(8).getColor());
+		clone.back.getSquare(3).setColor(clone.top.getSquare(5).getColor());
+		clone.back.getSquare(6).setColor(clone.top.getSquare(2).getColor());
 		
-		newCube.top.getSquare(2).setColor(newCube.holder.getSquare(2).getColor());
-		newCube.top.getSquare(5).setColor(newCube.holder.getSquare(5).getColor());
-		newCube.top.getSquare(8).setColor(newCube.holder.getSquare(8).getColor());
+		clone.top.getSquare(2).setColor(clone.holder.getSquare(2).getColor());
+		clone.top.getSquare(5).setColor(clone.holder.getSquare(5).getColor());
+		clone.top.getSquare(8).setColor(clone.holder.getSquare(8).getColor());
 
-		newCube.solvePath.Add(2);
+		clone.solvePath.Add(2);
 		
-		return newCube;
+		return clone;
 	}
 	
 	/* 
@@ -508,31 +508,31 @@ class Cube{
 	* Adds the corresponding path number to the Cube's solvePath list when finished.
 	*/
 	public Cube createRightCounterClockwise() {
-		Cube newCube = this;
+		Cube clone = new Cube(this);
 		
-		newCube.holder.getSquare(2).setColor(newCube.front.getSquare(2).getColor());
-		newCube.holder.getSquare(5).setColor(newCube.front.getSquare(5).getColor());
-		newCube.holder.getSquare(8).setColor(newCube.front.getSquare(8).getColor());
+		clone.holder.getSquare(2).setColor(clone.front.getSquare(2).getColor());
+		clone.holder.getSquare(5).setColor(clone.front.getSquare(5).getColor());
+		clone.holder.getSquare(8).setColor(clone.front.getSquare(8).getColor());
 		
-		newCube.front.getSquare(2).setColor(newCube.top.getSquare(2).getColor());
-		newCube.front.getSquare(5).setColor(newCube.top.getSquare(5).getColor());
-		newCube.front.getSquare(8).setColor(newCube.top.getSquare(8).getColor());
+		clone.front.getSquare(2).setColor(clone.top.getSquare(2).getColor());
+		clone.front.getSquare(5).setColor(clone.top.getSquare(5).getColor());
+		clone.front.getSquare(8).setColor(clone.top.getSquare(8).getColor());
 		
-		newCube.top.getSquare(2).setColor(newCube.back.getSquare(6).getColor());
-		newCube.top.getSquare(5).setColor(newCube.back.getSquare(3).getColor());
-		newCube.top.getSquare(8).setColor(newCube.back.getSquare(0).getColor());
+		clone.top.getSquare(2).setColor(clone.back.getSquare(6).getColor());
+		clone.top.getSquare(5).setColor(clone.back.getSquare(3).getColor());
+		clone.top.getSquare(8).setColor(clone.back.getSquare(0).getColor());
 		
-		newCube.back.getSquare(0).setColor(newCube.bottom.getSquare(8).getColor());
-		newCube.back.getSquare(3).setColor(newCube.bottom.getSquare(5).getColor());
-		newCube.back.getSquare(6).setColor(newCube.bottom.getSquare(2).getColor());
+		clone.back.getSquare(0).setColor(clone.bottom.getSquare(8).getColor());
+		clone.back.getSquare(3).setColor(clone.bottom.getSquare(5).getColor());
+		clone.back.getSquare(6).setColor(clone.bottom.getSquare(2).getColor());
 		
-		newCube.bottom.getSquare(2).setColor(newCube.holder.getSquare(2).getColor());
-		newCube.bottom.getSquare(5).setColor(newCube.holder.getSquare(5).getColor());
-		newCube.bottom.getSquare(8).setColor(newCube.holder.getSquare(8).getColor());
+		clone.bottom.getSquare(2).setColor(clone.holder.getSquare(2).getColor());
+		clone.bottom.getSquare(5).setColor(clone.holder.getSquare(5).getColor());
+		clone.bottom.getSquare(8).setColor(clone.holder.getSquare(8).getColor());
 		
-		newCube.solvePath.Add(3);
+		clone.solvePath.Add(3);
 		
-		return newCube;
+		return clone;
 	}
 	
 	/* 
@@ -540,18 +540,18 @@ class Cube{
 	* Adds the corresponding path number to the Cube's solvePath list when finished.
 	*/
 	public Cube createTopClockwise() {
-		Cube newCube = this;
+		Cube clone = new Cube(this);
 		
 		for(int i = 0; i < 3; i++) {
-			newCube.holder.getSquare(i).setColor(newCube.front.getSquare(i).getColor());
-			newCube.front.getSquare(i).setColor(newCube.right.getSquare(i).getColor());
-			newCube.right.getSquare(i).setColor(newCube.back.getSquare(i).getColor());
-			newCube.back.getSquare(i).setColor(newCube.left.getSquare(i).getColor());
-			newCube.left.getSquare(i).setColor(newCube.holder.getSquare(i).getColor());
+			clone.holder.getSquare(i).setColor(clone.front.getSquare(i).getColor());
+			clone.front.getSquare(i).setColor(clone.right.getSquare(i).getColor());
+			clone.right.getSquare(i).setColor(clone.back.getSquare(i).getColor());
+			clone.back.getSquare(i).setColor(clone.left.getSquare(i).getColor());
+			clone.left.getSquare(i).setColor(clone.holder.getSquare(i).getColor());
 		}
-		newCube.solvePath.Add(4);
+		clone.solvePath.Add(4);
 		
-		return newCube;
+		return clone;
 	}
 	
 	/* 
@@ -559,18 +559,18 @@ class Cube{
 	* Adds the corresponding path number to the Cube's solvePath list when finished.
 	*/
 	public Cube createTopCounterClockwise() {
-		Cube newCube = this;
+		Cube clone = new Cube(this);
 		
 		for(int i = 0; i < 3; i++) {
-			newCube.holder.getSquare(i).setColor(newCube.front.getSquare(i).getColor());
-			newCube.front.getSquare(i).setColor(newCube.left.getSquare(i).getColor());
-			newCube.left.getSquare(i).setColor(newCube.back.getSquare(i).getColor());
-			newCube.back.getSquare(i).setColor(newCube.right.getSquare(i).getColor());
-			newCube.right.getSquare(i).setColor(newCube.holder.getSquare(i).getColor());
+			clone.holder.getSquare(i).setColor(clone.front.getSquare(i).getColor());
+			clone.front.getSquare(i).setColor(clone.left.getSquare(i).getColor());
+			clone.left.getSquare(i).setColor(clone.back.getSquare(i).getColor());
+			clone.back.getSquare(i).setColor(clone.right.getSquare(i).getColor());
+			clone.right.getSquare(i).setColor(clone.holder.getSquare(i).getColor());
 		}
-		newCube.solvePath.Add(5);
+		clone.solvePath.Add(5);
 		
-		return newCube;
+		return clone;
 	}
 	
 	/* 
@@ -578,18 +578,18 @@ class Cube{
 	* Adds the corresponding path number to the Cube's solvePath list when finished.
 	*/
 	public Cube createBottomClockwise() {
-		Cube newCube = this;
+		Cube clone = new Cube(this);
 		
 		for(int i = 6; i < 9; i++) {
-			newCube.holder.getSquare(i).setColor(newCube.front.getSquare(i).getColor());
-			newCube.front.getSquare(i).setColor(newCube.left.getSquare(i).getColor());
-			newCube.left.getSquare(i).setColor(newCube.back.getSquare(i).getColor());
-			newCube.back.getSquare(i).setColor(newCube.right.getSquare(i).getColor());
-			newCube.right.getSquare(i).setColor(newCube.holder.getSquare(i).getColor());
+			clone.holder.getSquare(i).setColor(clone.front.getSquare(i).getColor());
+			clone.front.getSquare(i).setColor(clone.left.getSquare(i).getColor());
+			clone.left.getSquare(i).setColor(clone.back.getSquare(i).getColor());
+			clone.back.getSquare(i).setColor(clone.right.getSquare(i).getColor());
+			clone.right.getSquare(i).setColor(clone.holder.getSquare(i).getColor());
 		}
-		newCube.solvePath.Add(6);
+		clone.solvePath.Add(6);
 		
-		return newCube;
+		return clone;
 	}
 	
 	/* 
@@ -597,18 +597,18 @@ class Cube{
 	* Adds the corresponding path number to the Cube's solvePath list when finished.
 	*/
 	public Cube createBottomCounterClockwise() {
-		Cube newCube = this;
+		Cube clone = new Cube(this);
 		
 		for(int i = 6; i < 9; i++) {
-			newCube.holder.getSquare(i).setColor(newCube.front.getSquare(i).getColor());
-			newCube.front.getSquare(i).setColor(newCube.right.getSquare(i).getColor());
-			newCube.right.getSquare(i).setColor(newCube.back.getSquare(i).getColor());
-			newCube.back.getSquare(i).setColor(newCube.left.getSquare(i).getColor());
-			newCube.left.getSquare(i).setColor(newCube.holder.getSquare(i).getColor());
+			clone.holder.getSquare(i).setColor(clone.front.getSquare(i).getColor());
+			clone.front.getSquare(i).setColor(clone.right.getSquare(i).getColor());
+			clone.right.getSquare(i).setColor(clone.back.getSquare(i).getColor());
+			clone.back.getSquare(i).setColor(clone.left.getSquare(i).getColor());
+			clone.left.getSquare(i).setColor(clone.holder.getSquare(i).getColor());
 		}
-		newCube.solvePath.Add(7);
+		clone.solvePath.Add(7);
 		
-		return newCube;
+		return clone;
 	}
 	
 	/* 
@@ -616,31 +616,31 @@ class Cube{
 	* Adds the corresponding path number to the Cube's solvePath list when finished.
 	*/
 	public Cube createFrontClockwise() {
-		Cube newCube = this;
+		Cube clone = new Cube(this);
 		
 		for(int i = 6; i < 9; i++) {
-			newCube.holder.getSquare(i).setColor(newCube.top.getSquare(i).getColor());
+			clone.holder.getSquare(i).setColor(clone.top.getSquare(i).getColor());
 		}
 		
-		newCube.top.getSquare(6).setColor(newCube.left.getSquare(8).getColor());
-		newCube.top.getSquare(7).setColor(newCube.left.getSquare(5).getColor());
-		newCube.top.getSquare(8).setColor(newCube.left.getSquare(2).getColor());
+		clone.top.getSquare(6).setColor(clone.left.getSquare(8).getColor());
+		clone.top.getSquare(7).setColor(clone.left.getSquare(5).getColor());
+		clone.top.getSquare(8).setColor(clone.left.getSquare(2).getColor());
 		
-		newCube.left.getSquare(2).setColor(newCube.bottom.getSquare(0).getColor());
-		newCube.left.getSquare(5).setColor(newCube.bottom.getSquare(1).getColor());
-		newCube.left.getSquare(8).setColor(newCube.bottom.getSquare(2).getColor());
+		clone.left.getSquare(2).setColor(clone.bottom.getSquare(0).getColor());
+		clone.left.getSquare(5).setColor(clone.bottom.getSquare(1).getColor());
+		clone.left.getSquare(8).setColor(clone.bottom.getSquare(2).getColor());
 		
-		newCube.bottom.getSquare(0).setColor(newCube.right.getSquare(6).getColor());
-		newCube.bottom.getSquare(1).setColor(newCube.right.getSquare(3).getColor());
-		newCube.bottom.getSquare(2).setColor(newCube.right.getSquare(0).getColor());
+		clone.bottom.getSquare(0).setColor(clone.right.getSquare(6).getColor());
+		clone.bottom.getSquare(1).setColor(clone.right.getSquare(3).getColor());
+		clone.bottom.getSquare(2).setColor(clone.right.getSquare(0).getColor());
 		
-		newCube.right.getSquare(0).setColor(newCube.holder.getSquare(6).getColor());
-		newCube.right.getSquare(3).setColor(newCube.holder.getSquare(7).getColor());
-		newCube.right.getSquare(6).setColor(newCube.holder.getSquare(8).getColor());
+		clone.right.getSquare(0).setColor(clone.holder.getSquare(6).getColor());
+		clone.right.getSquare(3).setColor(clone.holder.getSquare(7).getColor());
+		clone.right.getSquare(6).setColor(clone.holder.getSquare(8).getColor());
 
-		newCube.solvePath.Add(8);
+		clone.solvePath.Add(8);
 		
-		return newCube;
+		return clone;
 	}
 	
 	/* 
@@ -648,31 +648,31 @@ class Cube{
 	* Adds the corresponding path number to the Cube's solvePath list when finished.
 	*/
 	public Cube createFrontCounterClockwise() {
-		Cube newCube = this;
+		Cube clone = new Cube(this);
 		
 		for(int i = 6; i < 9; i++) {
-			newCube.holder.getSquare(i).setColor(newCube.top.getSquare(i).getColor());
+			clone.holder.getSquare(i).setColor(clone.top.getSquare(i).getColor());
 		}
 		
-		newCube.top.getSquare(6).setColor(newCube.right.getSquare(0).getColor());
-		newCube.top.getSquare(7).setColor(newCube.right.getSquare(3).getColor());
-		newCube.top.getSquare(8).setColor(newCube.right.getSquare(6).getColor());
+		clone.top.getSquare(6).setColor(clone.right.getSquare(0).getColor());
+		clone.top.getSquare(7).setColor(clone.right.getSquare(3).getColor());
+		clone.top.getSquare(8).setColor(clone.right.getSquare(6).getColor());
 		
-		newCube.right.getSquare(0).setColor(newCube.bottom.getSquare(2).getColor());
-		newCube.right.getSquare(3).setColor(newCube.bottom.getSquare(1).getColor());
-		newCube.right.getSquare(6).setColor(newCube.bottom.getSquare(0).getColor());
+		clone.right.getSquare(0).setColor(clone.bottom.getSquare(2).getColor());
+		clone.right.getSquare(3).setColor(clone.bottom.getSquare(1).getColor());
+		clone.right.getSquare(6).setColor(clone.bottom.getSquare(0).getColor());
 		
-		newCube.bottom.getSquare(0).setColor(newCube.left.getSquare(2).getColor());
-		newCube.bottom.getSquare(1).setColor(newCube.left.getSquare(5).getColor());
-		newCube.bottom.getSquare(2).setColor(newCube.left.getSquare(8).getColor());
+		clone.bottom.getSquare(0).setColor(clone.left.getSquare(2).getColor());
+		clone.bottom.getSquare(1).setColor(clone.left.getSquare(5).getColor());
+		clone.bottom.getSquare(2).setColor(clone.left.getSquare(8).getColor());
 		
-		newCube.left.getSquare(2).setColor(newCube.holder.getSquare(8).getColor());
-		newCube.left.getSquare(5).setColor(newCube.holder.getSquare(7).getColor());
-		newCube.left.getSquare(8).setColor(newCube.holder.getSquare(6).getColor());
+		clone.left.getSquare(2).setColor(clone.holder.getSquare(8).getColor());
+		clone.left.getSquare(5).setColor(clone.holder.getSquare(7).getColor());
+		clone.left.getSquare(8).setColor(clone.holder.getSquare(6).getColor());
 		
-		newCube.solvePath.Add(9);
+		clone.solvePath.Add(9);
 		
-		return newCube;
+		return clone;
 	}
 	
 	/* 
@@ -680,31 +680,31 @@ class Cube{
 	* Adds the corresponding path number to the Cube's solvePath list when finished.
 	*/
 	public Cube createBackClockwise() {
-		Cube newCube = this;
+		Cube clone = new Cube(this);
 		
 		for(int i = 0; i < 3; i++) {
-			newCube.holder.getSquare(i).setColor(newCube.top.getSquare(i).getColor());
+			clone.holder.getSquare(i).setColor(clone.top.getSquare(i).getColor());
 		}
 		
-		newCube.top.getSquare(0).setColor(newCube.right.getSquare(2).getColor());
-		newCube.top.getSquare(1).setColor(newCube.right.getSquare(5).getColor());
-		newCube.top.getSquare(2).setColor(newCube.right.getSquare(8).getColor());
+		clone.top.getSquare(0).setColor(clone.right.getSquare(2).getColor());
+		clone.top.getSquare(1).setColor(clone.right.getSquare(5).getColor());
+		clone.top.getSquare(2).setColor(clone.right.getSquare(8).getColor());
 
-		newCube.right.getSquare(2).setColor(newCube.bottom.getSquare(8).getColor());
-		newCube.right.getSquare(5).setColor(newCube.bottom.getSquare(7).getColor());
-		newCube.right.getSquare(8).setColor(newCube.bottom.getSquare(6).getColor());
+		clone.right.getSquare(2).setColor(clone.bottom.getSquare(8).getColor());
+		clone.right.getSquare(5).setColor(clone.bottom.getSquare(7).getColor());
+		clone.right.getSquare(8).setColor(clone.bottom.getSquare(6).getColor());
 
-		newCube.bottom.getSquare(6).setColor(newCube.left.getSquare(0).getColor());
-		newCube.bottom.getSquare(7).setColor(newCube.left.getSquare(3).getColor());
-		newCube.bottom.getSquare(8).setColor(newCube.left.getSquare(6).getColor());
+		clone.bottom.getSquare(6).setColor(clone.left.getSquare(0).getColor());
+		clone.bottom.getSquare(7).setColor(clone.left.getSquare(3).getColor());
+		clone.bottom.getSquare(8).setColor(clone.left.getSquare(6).getColor());
 
-		newCube.left.getSquare(0).setColor(newCube.holder.getSquare(2).getColor());
-		newCube.left.getSquare(3).setColor(newCube.holder.getSquare(1).getColor());
-		newCube.left.getSquare(6).setColor(newCube.holder.getSquare(0).getColor());
+		clone.left.getSquare(0).setColor(clone.holder.getSquare(2).getColor());
+		clone.left.getSquare(3).setColor(clone.holder.getSquare(1).getColor());
+		clone.left.getSquare(6).setColor(clone.holder.getSquare(0).getColor());
 		
-		newCube.solvePath.Add(10);
+		clone.solvePath.Add(10);
 		
-		return newCube;
+		return clone;
 	}
 	
 	/* 
@@ -712,31 +712,31 @@ class Cube{
 	* Adds the corresponding path number to the Cube's solvePath list when finished.
 	*/
 	public Cube createBackCounterClockwise() {
-		Cube newCube = this;
+		Cube clone = new Cube(this);
 		
 		for(int i = 0; i < 3; i++) {
-			newCube.holder.getSquare(i).setColor(newCube.top.getSquare(i).getColor());
+			clone.holder.getSquare(i).setColor(clone.top.getSquare(i).getColor());
 		}
 		
-		newCube.top.getSquare(0).setColor(newCube.left.getSquare(6).getColor());
-		newCube.top.getSquare(1).setColor(newCube.left.getSquare(3).getColor());
-		newCube.top.getSquare(2).setColor(newCube.left.getSquare(0).getColor());
+		clone.top.getSquare(0).setColor(clone.left.getSquare(6).getColor());
+		clone.top.getSquare(1).setColor(clone.left.getSquare(3).getColor());
+		clone.top.getSquare(2).setColor(clone.left.getSquare(0).getColor());
 		
-		newCube.left.getSquare(0).setColor(newCube.bottom.getSquare(6).getColor());
-		newCube.left.getSquare(3).setColor(newCube.bottom.getSquare(7).getColor());
-		newCube.left.getSquare(6).setColor(newCube.bottom.getSquare(8).getColor());
+		clone.left.getSquare(0).setColor(clone.bottom.getSquare(6).getColor());
+		clone.left.getSquare(3).setColor(clone.bottom.getSquare(7).getColor());
+		clone.left.getSquare(6).setColor(clone.bottom.getSquare(8).getColor());
 		
-		newCube.bottom.getSquare(6).setColor(newCube.right.getSquare(8).getColor());
-		newCube.bottom.getSquare(7).setColor(newCube.right.getSquare(5).getColor());
-		newCube.bottom.getSquare(8).setColor(newCube.right.getSquare(2).getColor());
+		clone.bottom.getSquare(6).setColor(clone.right.getSquare(8).getColor());
+		clone.bottom.getSquare(7).setColor(clone.right.getSquare(5).getColor());
+		clone.bottom.getSquare(8).setColor(clone.right.getSquare(2).getColor());
 		
-		newCube.right.getSquare(2).setColor(newCube.holder.getSquare(0).getColor());
-		newCube.right.getSquare(5).setColor(newCube.holder.getSquare(1).getColor());
-		newCube.right.getSquare(8).setColor(newCube.holder.getSquare(2).getColor());
+		clone.right.getSquare(2).setColor(clone.holder.getSquare(0).getColor());
+		clone.right.getSquare(5).setColor(clone.holder.getSquare(1).getColor());
+		clone.right.getSquare(8).setColor(clone.holder.getSquare(2).getColor());
 		
-		newCube.solvePath.Add(11);
+		clone.solvePath.Add(11);
 		
-		return newCube;
+		return clone;
 	}
 	/*
 	* Returns the Cube's shufflePath list.
