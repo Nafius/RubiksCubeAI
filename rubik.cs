@@ -68,6 +68,16 @@ class Cube{
 	}
 	
 	public Cube(Cube clone){
+		this.top = new Side(5);
+		this.bottom = new Side(6);
+		this.front = new Side(1);
+		this.back = new Side(2);
+		this.left = new Side(3);
+		this.right = new Side(4);
+		this.holder = new Side(0);
+		this.shufflePath = new List<int>();
+		this.solvePath = new List<int>();
+		
 		for(int i = 0; i < 9; i++){
 			this.top.getSquare(i).setColor(clone.top.getSquare(i).getColor());
 			this.bottom.getSquare(i).setColor(clone.bottom.getSquare(i).getColor());
@@ -79,6 +89,10 @@ class Cube{
 		
 		for(int j = 0; j < clone.getSolvePath().Count; j++){
 			this.solvePath.Add(clone.getSolvePath()[j]);
+		}
+		
+		for(int k = 0; k < clone.getShufflePath().Count; k++){
+			this.shufflePath.Add(clone.getShufflePath()[k]);
 		}
 	}
 	/*
